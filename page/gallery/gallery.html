@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stephen King | Fan page</title>
+    <meta name="description" content="Opis stranice, dodaj još" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="../../icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="index">
+      <nav>
+        <div>
+          <a href="../../index.html" class="logo">Stephen King</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#" id="active">Gallery</a></li>
+          <li><a href="../faq/faq.html">FAQ</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="example2">
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <h2 class="section-heading">BOOK GALLERY</h2>
+        </div>
+        <p class="example3">These are my favourite books from the author.</p>
+        <br />
+        <p>
+          See all his books
+          <a href="https://stephenking.com/works/" target="_blank" class="link"
+            >here</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <br /><br /><br />
+    <div class="container2">
+      <!-- Full-width images with number text -->
+
+      <div class="mySlides">
+        <img src="img/bag_of_bones.jpg" style="width: 100%" alt="5" />
+      </div>
+
+      <div class="mySlides">
+        <img src="img/desperation.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/shinning.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/doctor_sleep.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/green_mile.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/misery.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/needful_things.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/pet_sematary.jpg" style="width: 100%" alt="6" />
+      </div>
+      <div class="mySlides">
+        <img src="img/first.jpg" style="width: 100%" alt="8" />
+      </div>
+      <div class="mySlides">
+        <img src="img/full_dark_no_stars.jpg" style="width: 100%" alt="2" />
+      </div>
+
+      <div class="mySlides">
+        <img src="img/different_seasons.jpg" style="width: 100%" alt="3" />
+      </div>
+
+      <div class="mySlides">
+        <img src="img/skeleton_crew.jpg" style="width: 100%" alt="9" />
+      </div>
+      <div class="mySlides">
+        <img src="img/running_man.jpg" style="width: 100%" alt="8" />
+      </div>
+      <div class="mySlides">
+        <img src="img/thinner.jpg" style="width: 100%" alt="8" />
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/bag_of_bones.jpg"
+            style="width: 100%"
+            onclick="currentSlide(1)"
+            alt="Bag of Bones, 1998. - horror, fantasy"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/desperation.jpg"
+            style="width: 100%"
+            onclick="currentSlide(2)"
+            alt="Desperation, 1996. - horror, fantasy"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/shinning.jpg"
+            style="width: 100%"
+            onclick="currentSlide(3)"
+            alt="The Shining, 1977. - psychological horror"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/doctor_sleep.jpg"
+            style="width: 100%"
+            onclick="currentSlide(4)"
+            alt="Doctor Sleep, 2013. - The shining sequel, horror"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/green_mile.jpg"
+            style="width: 100%"
+            onclick="currentSlide(5)"
+            alt="The Green Mile, 1996. - fantasy, magic realism"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/misery.jpg"
+            style="width: 100%"
+            onclick="currentSlide(6)"
+            alt="Misery, 1987. - psychological thriller"
+          />
+        </div>
+
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/needful_things.jpg"
+            style="width: 100%"
+            onclick="currentSlide(7)"
+            alt="Needful Things, 1991. - psychological horror"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/pet_sematary.jpg"
+            style="width: 100%"
+            onclick="currentSlide(8)"
+            alt="Pet Sematary, 1986. - fantasy, horror"
+          />
+        </div>
+        <div class="column column2">
+          <img
+            class="demo"
+            src="img/first.jpg"
+            style="width: 100%"
+            onclick="currentSlide(9)"
+            alt="The Dark Tower: The Gunslinger, 1982. - western, fantasy"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="img/full_dark_no_stars.jpg"
+            style="width: 100%"
+            onclick="currentSlide(10)"
+            alt="Full Dark, No Stars, 2010. - short story collection, horror"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="img/different_seasons.jpg"
+            style="width: 100%"
+            onclick="currentSlide(11)"
+            alt="Different Seasons, 1982. - short story collection, thriller"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="img/skeleton_crew.jpg"
+            style="width: 100%"
+            onclick="currentSlide(12)"
+            alt="Skeleton Crew, 1985. - short story collection, horror, fantasy"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="img/running_man.jpg"
+            style="width: 100%"
+            onclick="currentSlide(13)"
+            alt="The Running Man, 1982. - Richard Bachman book, science fiction"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="img/thinner.jpg"
+            style="width: 100%"
+            onclick="currentSlide(14)"
+            alt="Thinner, 1984. - Richard Bachman book, horror"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <a href="#index">
+        <img src="../../img/arrow.png" alt="Arrow" class="arrow" />
+      </a>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+
+    <script src="../../app.js"></script>
+  </body>
+</html>

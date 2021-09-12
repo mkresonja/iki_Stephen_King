@@ -1,0 +1,367 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+body {
+  background: rgb(124, 122, 122);
+  background: linear-gradient(
+    180deg,
+    rgb(187, 181, 181) 0%,
+    rgba(52, 52, 50, 1) 42%,
+    rgba(25, 21, 21, 1) 89%
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#active {
+  color: snow;
+  background-color: transparent;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  border-bottom: silver solid 3px;
+
+  .logo {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: silver;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+    a {
+      color: silver;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    :hover {
+      color: snow;
+      transition: 0.9s;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+  :hover {
+    color: snow;
+    transition: 0.9s;
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+
+  div {
+    width: 25px;
+    height: 2.5px;
+    background-color: silver;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+.container2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3em;
+  text-align: center;
+}
+.mySlides {
+  height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.prev,
+.next {
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -70px;
+  color: silver;
+  font-weight: 300;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-right: 20%;
+  border-radius: 10px;
+}
+.next {
+  right: 2%;
+}
+.prev {
+  left: 56%;
+}
+.prev:hover,
+.next:hover {
+  background-color: snow;
+  opacity: 70%;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 20px;
+}
+.caption-container {
+  text-align: center;
+  background-color: transparent;
+  // padding: 5px 16px;
+  margin-top: 1%;
+}
+#caption {
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+  color: silver;
+  text-align: center;
+}
+.row {
+  filter: grayscale(60%);
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.example2 {
+  width: 30%;
+  float: left;
+  padding: 3em;
+  margin-top: 8%;
+  color: silver;
+  border: 5px solid snow;
+  border-radius: 10px;
+  margin-left: 4%;
+}
+.example3 {
+  width: 75%;
+  padding: 3em;
+  color: silver;
+  border: 3px solid snow;
+  border-radius: 10px;
+  margin-left: 11%;
+  margin-top: 5%;
+  text-align: center;
+  opacity: 80%;
+}
+
+.link {
+  color: silver;
+  text-decoration: none;
+}
+//7 columns side by side
+.column {
+  float: left;
+  width: 6.1%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5%;
+}
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.arrow {
+  width: 2.5%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .prev,
+  .next {
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    padding: 15px;
+    margin-top: -430px;
+    color: silver;
+    font-weight: 300;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-right: 20%;
+    border-radius: 10px;
+  }
+  .next {
+    right: -9%;
+  }
+  .prev {
+    left: 55%;
+  }
+  .example2 {
+    width: 40%;
+    float: left;
+    padding: 3em;
+    margin-top: 8%;
+    color: silver;
+    border: 5px solid snow;
+    border-radius: 10px;
+    margin-left: 4%;
+  }
+  .example3 {
+    width: 75%;
+    padding: 3em;
+    color: silver;
+    border: 3px solid snow;
+    border-radius: 10px;
+    margin-left: 11%;
+    margin-top: 5%;
+    text-align: center;
+    opacity: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .logo {
+    margin-right: 150px;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 15vh;
+    top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+    li {
+      opacity: 1;
+    }
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .arrow {
+    width: 5%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .example2 {
+    width: 92%;
+    margin-top: 15%;
+    color: silver;
+    border: 5px solid snow;
+    border-radius: 10px;
+  }
+
+  .column {
+    float: left;
+    width: 10%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5%;
+  }
+  .prev,
+  .next {
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    padding: 15px;
+    margin-top: -70px;
+    color: silver;
+    font-weight: 300;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-right: 20%;
+    border-radius: 10px;
+  }
+  .next {
+    right: -5%;
+  }
+  .prev {
+    left: 15%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
