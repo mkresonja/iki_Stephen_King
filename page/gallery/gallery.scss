@@ -1,6 +1,17 @@
+$color-snow: snow;
+$color-silver: silver;
+$px: 20px;
+$percent: 20%;
+$hundo: 100%;
+$center: center;
+$overflow: hidden;
+$border: solid;
+$nothing: none;
+$cursor: pointer;
+
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: $overflow;
 }
 
 * {
@@ -21,36 +32,36 @@ body {
     rgba(52, 52, 50, 1) 42%,
     rgba(25, 21, 21, 1) 89%
   );
-  height: 100%;
+  height: $hundo;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: $center;
+  align-items: $center;
+  text-align: $center;
 }
 
 #active {
-  color: snow;
+  color: $color-snow;
   background-color: transparent;
 }
 
 nav {
   position: fixed;
-  width: 100%;
+  width: $hundo;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: $center;
   min-height: 8vh;
-  border-bottom: silver solid 3px;
+  border-bottom: $color-silver $border 3px;
 
   .logo {
-    text-decoration: none;
+    text-decoration: $nothing;
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 25px;
     text-transform: uppercase;
-    color: silver;
+    color: $color-silver;
   }
 
   .nav-links {
@@ -59,72 +70,72 @@ nav {
     width: 30%;
 
     a {
-      color: silver;
-      text-decoration: none;
+      color: $color-silver;
+      text-decoration: $nothing;
       letter-spacing: 2px;
       font-weight: bold;
-      font-size: 20px;
+      font-size: $px;
       text-transform: uppercase;
     }
     :hover {
-      color: snow;
+      color: $color-snow;
       transition: 0.9s;
     }
 
     li {
-      list-style: none;
+      list-style: $nothing;
     }
   }
   :hover {
-    color: snow;
+    color: $color-snow;
     transition: 0.9s;
   }
 }
 
 .burger {
-  display: none;
-  cursor: pointer;
+  display: $nothing;
+  cursor: $cursor;
 
   div {
     width: 25px;
     height: 2.5px;
-    background-color: silver;
+    background-color: $color-silver;
     margin: 5px;
     transition: all 0.3s ease;
   }
 }
 
 .container2 {
-  align-items: center;
+  align-items: $center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 3em;
-  text-align: center;
+  text-align: $center;
 }
 .mySlides {
   height: 50vh;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: $center;
 }
 
 .prev,
 .next {
-  align-items: center;
+  align-items: $center;
   justify-content: space-evenly;
-  cursor: pointer;
+  cursor: $cursor;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 15px;
   margin-top: -70px;
-  color: silver;
+  color: $color-silver;
   font-weight: 300;
-  font-size: 20px;
-  user-select: none;
-  -webkit-user-select: none;
-  margin-right: 20%;
+  font-size: $px;
+  user-select: $nothing;
+  -webkit-user-select: $nothing;
+  margin-right: $percent;
   border-radius: 10px;
 }
 .next {
@@ -135,16 +146,16 @@ nav {
 }
 .prev:hover,
 .next:hover {
-  background-color: snow;
+  background-color: $color-snow;
   opacity: 70%;
   border-radius: 10px;
 }
 
 img {
-  border-radius: 20px;
+  border-radius: $px;
 }
 .caption-container {
-  text-align: center;
+  text-align: $center;
   background-color: transparent;
   // padding: 5px 16px;
   margin-top: 1%;
@@ -152,8 +163,8 @@ img {
 #caption {
   padding-top: 2rem;
   padding-bottom: 0.75rem;
-  color: silver;
-  text-align: center;
+  color: $color-silver;
+  text-align: $center;
 }
 .row {
   filter: grayscale(60%);
@@ -169,34 +180,34 @@ img {
   float: left;
   padding: 3em;
   margin-top: 8%;
-  color: silver;
-  border: 5px solid snow;
+  color: $color-silver;
+  border: 5px $border $color-snow;
   border-radius: 10px;
   margin-left: 4%;
 }
 .example3 {
   width: 75%;
   padding: 3em;
-  color: silver;
-  border: 3px solid snow;
+  color: $color-silver;
+  border: 3px $border $color-snow;
   border-radius: 10px;
   margin-left: 11%;
   margin-top: 5%;
-  text-align: center;
+  text-align: $center;
   opacity: 80%;
 }
 
 .link {
-  color: silver;
-  text-decoration: none;
+  color: $color-silver;
+  text-decoration: $nothing;
 }
 //7 columns side by side
 .column {
   float: left;
   width: 6.1%;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
+  cursor: $cursor;
+  justify-content: $center;
+  align-items: $center;
   margin: 0.5%;
 }
 .demo {
@@ -217,8 +228,8 @@ img {
 
 @media screen and (max-width: 1024px) {
   body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: $overflow;
+    overflow-y: $overflow;
   }
   .nav-links {
     width: 60%;
@@ -228,20 +239,20 @@ img {
 @media (max-width: 1200px) {
   .prev,
   .next {
-    align-items: center;
+    align-items: $center;
     justify-content: space-evenly;
-    cursor: pointer;
+    cursor: $cursor;
     position: absolute;
-    top: 100%;
+    top: $hundo;
     width: auto;
     padding: 15px;
     margin-top: -430px;
-    color: silver;
+    color: $color-silver;
     font-weight: 300;
-    font-size: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    margin-right: 20%;
+    font-size: $px;
+    user-select: $nothing;
+    -webkit-user-select: $nothing;
+    margin-right: $percent;
     border-radius: 10px;
   }
   .next {
@@ -255,28 +266,28 @@ img {
     float: left;
     padding: 3em;
     margin-top: 8%;
-    color: silver;
-    border: 5px solid snow;
+    color: $color-silver;
+    border: 5px $border $color-snow;
     border-radius: 10px;
     margin-left: 4%;
   }
   .example3 {
     width: 75%;
     padding: 3em;
-    color: silver;
-    border: 3px solid snow;
+    color: $color-silver;
+    border: 3px $border $color-snow;
     border-radius: 10px;
     margin-left: 11%;
     margin-top: 5%;
-    text-align: center;
+    text-align: $center;
     opacity: 80%;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: $overflow;
+    overflow-y: $overflow;
   }
   .logo {
     margin-right: 150px;
@@ -288,9 +299,9 @@ img {
     top: 7vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 20%;
-    transform: translateX(100%);
+    align-items: $center;
+    width: $percent;
+    transform: translateX($hundo);
     transition: transform 0.5s ease-in;
 
     li {
@@ -300,7 +311,7 @@ img {
 
   .burger {
     display: block;
-    cursor: pointer;
+    cursor: $cursor;
   }
 
   .arrow {
@@ -312,35 +323,35 @@ img {
   .example2 {
     width: 92%;
     margin-top: 15%;
-    color: silver;
-    border: 5px solid snow;
+    color: $color-silver;
+    border: 5px $border $color-snow;
     border-radius: 10px;
   }
 
   .column {
     float: left;
     width: 10%;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
+    cursor: $cursor;
+    justify-content: $center;
+    align-items: $center;
     margin: 0.5%;
   }
   .prev,
   .next {
-    align-items: center;
+    align-items: $center;
     justify-content: space-evenly;
-    cursor: pointer;
+    cursor: $cursor;
     position: absolute;
-    top: 100%;
+    top: $hundo;
     width: auto;
     padding: 15px;
     margin-top: -70px;
-    color: silver;
+    color: $color-silver;
     font-weight: 300;
-    font-size: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    margin-right: 20%;
+    font-size: $px;
+    user-select: $nothing;
+    -webkit-user-select: $nothing;
+    margin-right: $percent;
     border-radius: 10px;
   }
   .next {
