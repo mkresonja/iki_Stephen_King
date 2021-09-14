@@ -40,6 +40,7 @@ nav {
           align-items: center;
   min-height: 8vh;
   border-bottom: silver solid 3px;
+  background: #7c7a7a;
 }
 
 nav .logo {
@@ -99,6 +100,10 @@ nav :hover {
   transition: all 0.3s ease;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .cover {
   position: absolute;
   margin: auto;
@@ -122,6 +127,7 @@ nav :hover {
           align-items: center;
   font-family: "Urbanist", sans-serif;
   color: #bbb5b5;
+  margin-bottom: 10%;
 }
 
 .buttons {
@@ -299,14 +305,80 @@ nav :hover {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-  .logo {
-    margin-right: 150px;
+  .cover {
+    display: none;
+  }
+  .buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 25%;
+  }
+  .example {
+    width: 100%;
+    font-size: 2vw;
+  }
+  .example2 {
+    width: 100%;
+    font-size: 2vw;
+  }
+  #writing-style {
+    width: 45%;
+    height: 50%;
+    margin-top: 20%;
+  }
+  #pseudonyms {
+    display: none;
+  }
+  #collabs {
+    width: 50%;
+  }
+  #influence {
+    width: 40%;
+  }
+  .arrow {
+    width: 5%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30%;
+  }
+  .example {
+    width: 100%;
+    font-size: 3.2vw;
+  }
+  .example2 {
+    width: 100%;
+    font-size: 3.2vw;
+  }
+  #collabs {
+    display: none;
+  }
+  #writing-style {
+    width: 50%;
+    height: 30%;
+    margin-top: 20%;
+  }
+  #influence {
+    width: 70%;
   }
   .nav-links {
     position: absolute;
     right: 0px;
     height: 15vh;
-    top: 7vh;
+    top: 8vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -324,6 +396,7 @@ nav :hover {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    background-color: #7c7a7a;
   }
   .nav-links li {
     opacity: 1;
@@ -332,42 +405,13 @@ nav :hover {
     display: block;
     cursor: pointer;
   }
-  .cover {
-    display: none;
-  }
-  .buttons {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .example {
-    width: 100%;
-    font-size: 2vw;
-  }
-  .example2 {
-    width: 100%;
-    font-size: 2vw;
-  }
-  #writing-style {
-    width: 65%;
-    height: 50%;
-  }
-  #pseudonyms {
-    display: none;
-  }
-  #collabs {
-    margin: auto;
-    z-index: -1;
-  }
-  #influence {
-    width: 60%;
-    height: 50%;
-  }
-  .arrow {
-    width: 5%;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+  .burger div {
+    width: 25px;
+    height: 2.5px;
+    background-color: silver;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 }
 

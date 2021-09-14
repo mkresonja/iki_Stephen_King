@@ -60,6 +60,7 @@ nav {
   align-items: $center;
   min-height: 8vh;
   border-bottom: $color-silver $border 3px;
+  background-color: rgb(124, 122, 122);
 
   .logo {
     text-decoration: $nothing;
@@ -121,39 +122,14 @@ nav {
   body {
     overflow-x: $overflow;
   }
-  .logo {
-    margin-right: 150px;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 15vh;
-    top: 7vh;
-    display: flex;
-    flex-direction: column;
-    align-items: $center;
-    width: $percent;
-    transform: translateX($hundo);
-    transition: transform 0.5s ease-in;
-
-    li {
-      opacity: 1;
-    }
-  }
-
-  .burger {
-    display: block;
-    cursor: $cursor;
-  }
-}
-
-.nav-active {
-  transform: translateX(0%);
 }
 
 #active {
   color: $color-snow;
   background-color: transparent;
+}
+.wrapper {
+  margin-bottom: 2%;
 }
 .Accordion {
   padding-top: 60px;
@@ -239,6 +215,131 @@ nav {
       }
     }
   }
+}
+
+@media screen and (max-width: 426px) {
+  .wrapper {
+    margin-bottom: 3%;
+  }
+  .Accordion {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    &__tabs {
+      margin-top: 10%;
+      max-width: 300px;
+      list-style: $nothing;
+    }
+
+    &__tab {
+      width: $hundo;
+
+      &__headline {
+        display: flex;
+        justify-content: space-between;
+        align-items: $center;
+        border-bottom: 1px $border rgba(#f8f8f8, 0.5);
+        transition: 0.2s ease all;
+        padding: $px 15px;
+        cursor: $cursor;
+        font-weight: 400;
+
+        &:hover {
+          background-color: rgb(124, 122, 122);
+        }
+
+        > h4 {
+          user-select: $nothing;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        .icon {
+          display: inline-block;
+          width: 0px;
+          height: 0px;
+          border: 0px $border;
+          border-radius: 0px;
+          position: sticky;
+
+          &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 6px;
+            width: 10px;
+            height: 1px;
+            background: currentColor;
+          }
+
+          &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: 10px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+            transition: 0.2s ease all;
+          }
+        }
+      }
+
+      &__content {
+        overflow: $overflow;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        height: $hundo;
+        max-height: 0;
+        transition: 0.4s ease all;
+      }
+
+      &--open {
+        .Accordion__tab {
+          &__headline {
+            .icon::after {
+              transform: scaleY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 15vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: $center;
+    width: $percent;
+    transform: translateX($hundo);
+    transition: transform 0.5s ease-in;
+    background-color: rgb(124, 122, 122);
+    li {
+      opacity: 1;
+    }
+  }
+
+  .burger {
+    display: block;
+    cursor: $cursor;
+    div {
+      width: 25px;
+      height: 2.5px;
+      background-color: $color-silver;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }
 
 @keyframes navLinkFade {

@@ -57,6 +57,7 @@ nav {
           align-items: center;
   min-height: 8vh;
   border-bottom: silver solid 3px;
+  background-color: #7c7a7a;
 }
 
 nav .logo {
@@ -126,49 +127,15 @@ nav :hover {
   body {
     overflow-x: hidden;
   }
-  .logo {
-    margin-right: 150px;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 15vh;
-    top: 7vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 20%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  }
-  .nav-links li {
-    opacity: 1;
-  }
-  .burger {
-    display: block;
-    cursor: pointer;
-  }
-}
-
-.nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 #active {
   color: snow;
   background-color: transparent;
+}
+
+.wrapper {
+  margin-bottom: 2%;
 }
 
 .Accordion {
@@ -264,6 +231,141 @@ nav :hover {
 .Accordion__tab--open .Accordion__tab__headline .icon::after {
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
+}
+
+@media screen and (max-width: 426px) {
+  .wrapper {
+    margin-bottom: 3%;
+  }
+  .Accordion {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .Accordion__tabs {
+    margin-top: 10%;
+    max-width: 300px;
+    list-style: none;
+  }
+  .Accordion__tab {
+    width: 100%;
+  }
+  .Accordion__tab__headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid rgba(248, 248, 248, 0.5);
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  .Accordion__tab__headline:hover {
+    background-color: #7c7a7a;
+  }
+  .Accordion__tab__headline > h4 {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .Accordion__tab__headline .icon {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .Accordion__tab__headline .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 6px;
+    width: 10px;
+    height: 1px;
+    background: currentColor;
+  }
+  .Accordion__tab__headline .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 10px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    -webkit-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+  }
+  .Accordion__tab__content {
+    overflow: hidden;
+    padding: 0px 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100%;
+    max-height: 0;
+    -webkit-transition: 0.4s ease all;
+    transition: 0.4s ease all;
+  }
+  .Accordion__tab--open .Accordion__tab__headline .icon::after {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 15vh;
+    top: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    background-color: #7c7a7a;
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .burger div {
+    width: 25px;
+    height: 2.5px;
+    background-color: silver;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @-webkit-keyframes navLinkFade {

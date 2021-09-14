@@ -45,6 +45,7 @@ nav {
   align-items: $center;
   min-height: 8vh;
   border-bottom: $color-silver $border 3px;
+  background: rgb(124, 122, 122);
 
   .logo {
     text-decoration: $nothing;
@@ -96,6 +97,10 @@ nav {
   }
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .cover {
   position: absolute;
   margin: auto;
@@ -113,7 +118,7 @@ nav {
   align-items: $center;
   font-family: "Urbanist", sans-serif;
   color: rgb(187, 181, 181);
-  // margin-right: 15%;
+  margin-bottom: 10%;
 }
 
 .buttons {
@@ -254,36 +259,12 @@ nav {
     overflow-y: $overflow;
   }
 
-  .logo {
-    margin-right: 150px;
-  }
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 15vh;
-    top: 7vh;
-    display: flex;
-    flex-direction: column;
-    align-items: $center;
-    width: $percent;
-    transform: translateX($hundo);
-    transition: transform 0.5s ease-in;
-
-    li {
-      opacity: 1;
-    }
-  }
-
-  .burger {
-    display: block;
-    cursor: $cursor;
-  }
-
   .cover {
     display: $nothing;
   }
   .buttons {
     align-items: $center;
+    margin-top: 25%;
   }
   .example {
     width: $hundo;
@@ -294,25 +275,83 @@ nav {
     font-size: 2vw;
   }
   #writing-style {
-    width: 65%;
+    width: 45%;
     height: 50%;
+    margin-top: 20%;
   }
   #pseudonyms {
     display: $nothing;
   }
   #collabs {
-    margin: auto;
-    z-index: -1;
+    width: 50%;
   }
   #influence {
-    width: 60%;
-    height: 50%;
+    width: 40%;
   }
   .arrow {
     width: 5%;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    overflow-x: $overflow;
+    overflow-y: $overflow;
+  }
+
+  .buttons {
+    align-items: $center;
+    margin-top: 30%;
+  }
+  .example {
+    width: $hundo;
+    font-size: 3.2vw;
+  }
+  .example2 {
+    width: $hundo;
+    font-size: 3.2vw;
+  }
+  #collabs {
+    display: none;
+  }
+  #writing-style {
+    width: 50%;
+    height: 30%;
+    margin-top: 20%;
+  }
+  #influence {
+    width: 70%;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 15vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: $center;
+    width: $percent;
+    transform: translateX($hundo);
+    transition: transform 0.5s ease-in;
+    background-color: rgb(124, 122, 122);
+    li {
+      opacity: 1;
+    }
+  }
+
+  .burger {
+    display: block;
+    cursor: $cursor;
+    div {
+      width: 25px;
+      height: 2.5px;
+      background-color: $color-silver;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
   }
 }
 
